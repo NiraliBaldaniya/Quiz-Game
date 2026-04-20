@@ -1,8 +1,3 @@
-let currentindex = 0;
-let timer;
-let time = 15;
-let score = 0;
-
 const btn = document.getElementById("startbtn");
 const box1 = document.getElementById("box1");
 const box2 = document.getElementById("box2");
@@ -14,8 +9,12 @@ const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const progressEl = document.getElementById("progress");
 const progressLine = document.getElementById("progress-line");
+const toggleBtn = document.getElementById("themetoggle");
 let username = "";
-
+let currentindex = 0;
+let timer;
+let time = 15;
+let score = 0;
 
 btn.addEventListener("click", () => {
  
@@ -159,7 +158,6 @@ else{
 };
 function showResult(){
 
-
     box3.classList.remove("show")
     document.querySelector(".result_box").style.display = "block";
      let message = "";
@@ -182,8 +180,6 @@ function showResult(){
 const quitBtn = document.getElementById("quitquiz");
 
 quitBtn.addEventListener("click", () => {
-
-    
     score = 0;
     currentindex = 0;
     time = 15;
@@ -194,8 +190,6 @@ quitBtn.addEventListener("click", () => {
     box2.classList.remove("show");
 
     document.querySelector(".result_box").style.display = "none";
-
-
     box1.style.display = "block";
     
     document.getElementById("username").value = "";
@@ -224,3 +218,13 @@ replayBtn.addEventListener("click", () => {
 
     loadquestion();
 });
+
+toggleBtn.onclick = () => {
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){   
+        toggleBtn.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/128/5915/5915194.png">`;
+    } else {      
+        toggleBtn.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/128/4489/4489231.png">`;
+    }
+};
