@@ -35,20 +35,6 @@ h3{
     font-size: 25px;
 }
 
-input{
-    width: 95%;
-    border-radius: 10px;
-    height: 40px;
-    font-size: 20px;
-    padding-left: 10px;
-    outline: none;
-    box-shadow: 0 7px 10px rgba(64, 47, 124, 0.2);
-}
-
-input:focus {
-    border: 2px solid #b690f3;
-}
-
 button{
     width: 120px;
     height: 50px;
@@ -243,8 +229,6 @@ h4{
     padding: 20px;
     margin: auto;
     border-radius: 15px;
-    background: #fdfcfc;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     text-align: center;
 }
 
@@ -264,4 +248,73 @@ h4{
 .endbtn button:hover{
     color: #dbeafe;
     background: #b690f3;
+}
+
+.input-mode{
+    display: flex;
+    align-items: center;
+    background: #eee;
+    border-radius: 30px;
+    padding: 10px;
+    width: auto;
+    border: 2px solid black;
+}
+
+.input-mode:focus-within{
+    border-color: #7453a8;
+}
+
+.input-mode input{
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    outline: none;
+}
+
+button img { width: 30px; }
+
+#themetoggle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;  
+}
+
+.dark{
+    background: #121212;
+}
+
+.dark .container,
+.dark h3,
+.dark .result_box h2{
+    background: #1e1e1e;
+    color: #eee
+}
+
+.dark input{
+    color: #000;
+}
+
+.dark #question {
+    color: #facc15;   
+}
+
+.dark button{
+    background: #2b2b2b;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dark button:hover{
+    background: #b690f3;
+    color: #fff;
 }
