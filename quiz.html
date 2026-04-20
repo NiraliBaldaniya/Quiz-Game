@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="box1">
+            <h1>QUIZ GAME</h1>
+            <h2> Enter your name</h2>
+            <input type="text" id="username">
+            <h3 id="alert"></h3>
+            <button  id="startbtn">Start Quiz</button>
+        </div> 
+        <div id="box2">
+            <h1>Quiz Rules</h1>
+            <p>1. You will have only 15 seconds per each question.</p>  
+            <p>2. Once you select your answer, it can't be undone.</p> 
+            <p>3. You can't select any option once time goes off.</p>  
+            <p>4. You can't exit from the Quiz while you're playing.</p>
+            <div class="btn">
+            <button id="exitbtn">EXIT QUIZ</button>
+            <button id="startquizbtn">START</button>
+            </div>
+        </div>
+       
+        <div id="box3">
+            <div class="quiz-header">
+                <h2>Quiz Questions</h2>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-line"></div>
+            </div>
+                <h4>(* When this line reaches the end, your time will be up.)</h4>
+                <h3 id="question"></h3>
+                <div id="options"></div>
+            <div class="footer">
+                <p id="progress"></p>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="result_box">
+            <img src="https://cdn-icons-png.flaticon.com/128/3593/3593584.png" alt="win">
+
+            <h2 class="result_text" id="finaltext"></h2>
+            <div class="endbtn">
+                <button class="restart" id="resetquiz">Replay Quiz</button>
+                <button class="quit" id="quitquiz">Quit Quiz</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="quizquestions.js"></script>
+</body>
+</html>
