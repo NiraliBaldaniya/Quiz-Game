@@ -164,12 +164,15 @@ function showResult(){
 
     if(score === questions.length){
         message = "🏆 Perfect! Amazing performance!";
+        celebrate();
     }
     else if(score >= questions.length/2){
         message = "😎 Excellent!";
-    }
+        celebrate(); 
+    } 
     else{
         message = "👍 Try again!";
+        celebrate();
     }
   
     document.getElementById("finaltext").innerHTML =
@@ -228,3 +231,13 @@ toggleBtn.onclick = () => {
         toggleBtn.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/128/4489/4489231.png">`;
     }
 };
+
+function celebrate() {
+    confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: {
+            y: 0.6
+        }
+    });
+}
