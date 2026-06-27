@@ -318,3 +318,22 @@ button img { width: 30px; }
     background: #b690f3;
     color: #fff;
 }
+
+.trophy{
+    display: inline-block;
+    animation: move 2s ease-in-out infinite;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
