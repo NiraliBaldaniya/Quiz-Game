@@ -272,6 +272,12 @@ h4{
     outline: none;
 }
 
+#username{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 button img { width: 30px; }
 
 #themetoggle{
